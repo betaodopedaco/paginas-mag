@@ -3,28 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadMagnet Pro | Gere até 50 contatos empresariais por dia</title>
-    <meta name="description" content="Encontre contatos empresariais segmentados automaticamente. Teste grátis e otimize seu processo de vendas com dados em tempo real.">
+    <title>Magnológica | Excelência em Transformação Digital</title>
+    <meta name="description" content="Soluções premium em transformação digital: sites exclusivos, leads qualificados e SEO estratégico para posicionar sua marca na vanguarda do mercado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos base do site */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Estilos da nova seção de portfólio */
+        .portfolio-section-new {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .portfolio-section-new .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            color: #888;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .portfolio-grid-new {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-top: 60px;
+        }
+        
+        .portfolio-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-mockup {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+        }
+        
+        .mockup-frame {
+            width: 280px;
+            height: 500px;
+            background: #111;
+            border-radius: 30px;
+            padding: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mockup-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 22px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: top center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .mockup-stand {
+            width: 100px;
+            height: 20px;
+            background: #444;
+            border-radius: 3px;
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        .mockup-stand::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 10px;
+            background: #333;
+            border-radius: 2px;
+        }
+        
+        .portfolio-content {
+            padding: 30px;
+        }
+        
+        .portfolio-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .portfolio-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .portfolio-description {
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .portfolio-btn-new {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+        
+        .portfolio-btn-new:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .portfolio-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-mockup {
+                padding: 40px 20px;
+            }
+            
+            .mockup-frame {
+                width: 250px;
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-section-new {
+                padding: 60px 0;
+            }
+            
+            .mockup-frame {
+                width: 220px;
+                height: 400px;
+            }
+            
+            .portfolio-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <i class="fas fa-bolt"></i>LeadMagnet<span>Pro</span>
+                <i class="fas fa-crown"></i>Magnológica
             </a>
             <nav class="nav-links">
-                <a href="#how-it-works">Como Funciona</a>
-                <a href="#proof">Resultados</a>
-                <a href="#comparison">Comparativo</a>
+                <a href="#how-it-works">Serviços</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#comparison">Vantagens</a>
                 <a href="#testimonials">Depoimentos</a>
             </nav>
-            <a href="https://wa.me/5581984027098?text=quero%20a%20ferramenta" target="_blank" class="cta-button">Testar Grátis</a>
+            <a href="https://wa.me/5581984027098?text=Quero%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="cta-button">Consultoria Gratuita</a>
         </div>
     </header>
 
@@ -36,9 +252,9 @@
         </video>
         <div class="container">
             <div class="hero-content">
-                <h1>Transforme sua prospecção com tecnologia de elite</h1>
-                <p>Até 50 contatos empresariais por dia. Com precisão. Com velocidade. Com inteligência.</p>
-                <a href="https://wa.me/5581984027098?text=quero%20a%20ferramenta" target="_blank" class="hero-button">Comece agora <i class="fas fa-arrow-right"></i></a>
+                <h1>Magnológica: Excelência em Transformação Digital</h1>
+                <p>Sua parceira estratégica para expansão digital com soluções premium que posicionam sua marca na vanguarda do mercado.</p>
+                <a href="https://wa.me/5581984027098?text=Quero%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="hero-button">Solicitar Consultoria <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -47,41 +263,41 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>Como Funciona</h2>
-                <p>Um processo simplificado para gerar contatos de alta qualidade em minutos</p>
+                <h2>Serviços Exclusivos</h2>
+                <p>Cada serviço foi meticulosamente desenhado para garantir resultados tangíveis e duradouros</p>
             </div>
             
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-icon">
-                        <i class="fas fa-search-location"></i>
+                        <i class="fas fa-building"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Escolha setor e localização</h3>
-                        <p>Defina o nicho de mercado e a região geográfica desejada</p>
+                        <h3>Leads Empresariais</h3>
+                        <p>Entrega diária de 30 a 50 contatos qualificados de empresas com alto potencial de conversão</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-laptop"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Nossa IA extrai os dados</h3>
-                        <p>Inteligência artificial varre o Google Maps em busca dos melhores contatos</p>
+                        <h3>Sites Premium</h3>
+                        <p>Design luxuoso e exclusivo que combina estética sofisticada com funcionalidade superior</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="step-content">
-                        <h3>Receba até 50 contatos por dia</h3>
-                        <p>Lista completa com informações de contato prontas para prospecção</p>
+                        <h3>Otimização SEO</h3>
+                        <p>Posicionamento estratégico no Google para atrair tráfego qualificado de forma orgânica</p>
                     </div>
                 </div>
             </div>
@@ -93,44 +309,138 @@
                     <div class="terminal-dot dot-green"></div>
                 </div>
                 <div class="terminal-content">
-                    <div class="terminal-text">> Iniciando busca no Google Maps...</div>
-                    <div class="terminal-text">> Setor: Serviços de Marketing Digital</div>
-                    <div class="terminal-text">> Localização: São Paulo - SP</div>
-                    <div class="terminal-text">> Encontrados 1.243 empresas...</div>
-                    <div class="terminal-text">> Filtrando por avaliação e relevância...</div>
-                    <div class="terminal-text">> Extraindo contatos principais...</div>
-                    <div class="terminal-text">> Gerando lista com 50 contatos...</div>
-                    <div class="terminal-text">> Processo concluído! Dados prontos para uso.</div>
+                    <div class="terminal-text">> Analisando presença digital atual...</div>
+                    <div class="terminal-text">> Identificando oportunidades de mercado...</div>
+                    <div class="terminal-text">> Desenvolvendo estratégia personalizada...</div>
+                    <div class="terminal-text">> Criando soluções premium sob medida...</div>
+                    <div class="terminal-text">> Implementando transformação digital...</div>
+                    <div class="terminal-text">> Otimizando para conversões...</div>
+                    <div class="terminal-text">> Gerando resultados mensuráveis...</div>
+                    <div class="terminal-text">> Transformação concluída! Negócio potencializado.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Proof Section -->
-    <section id="proof" class="proof-section">
+    <!-- Portfolio Section (substituindo a Proof Section) -->
+    <section id="portfolio" class="portfolio-section-new">
         <div class="container">
             <div class="section-header">
-                <h2>Resultados Reais</h2>
-                <p>Prospecção eficiente que transforma oportunidades em negócios concretos</p>
+                <h2>Obras Concluídas</h2>
+                <div class="subtitle">Onde o comum termina... e a grandeza começa.</div>
             </div>
             
-            <div class="proof-grid">
-                <div class="proof-card">
-                    <img src="assets/metricas.jpg" alt="Métricas de desempenho">
-                    <h3>Métricas Comprovadas</h3>
-                    <p>Relatórios detalhados mostrando o crescimento em prospecção</p>
+            <div class="portfolio-grid-new">
+                <!-- Projeto 1 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-frame">
+                            <div class="mockup-screen" style="background-image: url('https://i.ibb.co/Ps5X7Qqd/Screenshot-22.png');"></div>
+                        </div>
+                        <div class="mockup-stand"></div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">BARBEARIA</h3>
+                        
+                        <div class="portfolio-features">
+                            <span class="feature-tag">Design Narrativo</span>
+                            <span class="feature-tag">Estrutura de Conversão</span>
+                            <span class="feature-tag">Experiência Multissensorial</span>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Uma arquitetura digital que combina força mitológica com tecnologia de ponta. Cada elemento foi meticulosamente esculpido para transmitir poder e atualidade.
+                        </p>
+                        
+                        <a href="https://modas-barbearia-m5w1.vercel.app/" target="_blank" class="portfolio-btn-new">
+                            Ver Projeto ao Vivo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="proof-card">
-                    <img src="assets/contatos.jpg" alt="Contatos capturados">
-                    <h3>Contatos de Qualidade</h3>
-                    <p>Informações precisas de empresas segmentadas</p>
+                <!-- Projeto 2 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-frame">
+                            <div class="mockup-screen" style="background-image: url('https://i.supaimg.com/f977c5dc-f512-4a24-9cea-a01c1391bf9c.jpg');"></div>
+                        </div>
+                        <div class="mockup-stand"></div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Blog do Arquiteto</h3>
+                        
+                        <div class="portfolio-features">
+                            <span class="feature-tag">Estrutura Minimalista</span>
+                            <span class="feature-tag">SEO Avançado</span>
+                            <span class="feature-tag">Navegação Espacial</span>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Um espaço digital onde linhas, formas e espaços convergem em harmonia. Projetado como uma galeria virtual, cada post é uma exposição cuidadosamente curada.
+                        </p>
+                        
+                        <a href="https://arquiteturainova-bwuq.vercel.app/" target="_blank" class="portfolio-btn-new">
+                            Ver Projeto ao Vivo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="proof-card">
-                    <img src="assets/leads.jpg" alt="Volume de leads">
-                    <h3>Volume Consistente</h3>
-                    <p>Até 50 novos contatos empresariais todos os dias</p>
+                <!-- Projeto 3 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-frame">
+                            <div class="mockup-screen" style="background-image: url('https://i.ibb.co/bjMq6NNj/Screenshot-21.png');"></div>
+                        </div>
+                        <div class="mockup-stand"></div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">MODAS E BELEZA</h3>
+                        
+                        <div class="portfolio-features">
+                            <span class="feature-tag">Conversão Gourmet</span>
+                            <span class="feature-tag">Experiência Sensorial</span>
+                            <span class="feature-tag">Design Apetitoso</span>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Uma experiência digital que desperta os sentidos, combinando a tradição da moda e tecnologia contemporânea. Cada seção é uma camada de sabor visual.
+                        </p>
+                        
+                        <a href="https://modas-b.vercel.app/" target="_blank" class="portfolio-btn-new">
+                            Ver Projeto ao Vivo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-frame">
+                            <div class="mockup-screen" style="background-image: url('https://i.ibb.co/wNNyN38L/Screenshot-23.png');"></div>
+                        </div>
+                        <div class="mockup-stand"></div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cibernética</h3>
+                        
+                        <div class="portfolio-features">
+                            <span class="feature-tag">Futurismo Tático</span>
+                            <span class="feature-tag">Experiência Imersiva</span>
+                            <span class="feature-tag">Tecnologia de Ponta</span>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Uma ponte digital entre o presente e o futuro, onde circuitos e algoritmos se fundem em uma sinfonia visual. Cada interação é uma exploração de possibilidades.
+                        </p>
+                        
+                        <a href="https://portitfolio2.vercel.app/" target="_blank" class="portfolio-btn-new">
+                            Ver Projeto ao Vivo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,9 +450,9 @@
     <section class="visualization">
         <div class="container visualization-container">
             <div class="visualization-content">
-                <h2>Cada ponto no mapa é uma oportunidade</h2>
-                <p>Nossa tecnologia identifica empresas relevantes em qualquer região e setor, colocando você em contato direto com oportunidades de negócio que realmente importam.</p>
-                <p>Transforme dados geográficos em conexões valiosas com nossa plataforma inteligente.</p>
+                <h2>Estratégia Digital com Propósito</h2>
+                <p>Nossa abordagem vai além da tecnologia, criando uma presença digital premium que reflete a excelência da sua marca e conecta você com as oportunidades certas.</p>
+                <p>Cada solução é pensada para elevar seu negócio a um patamar superior no mercado digital.</p>
             </div>
             
             <div class="globe-container">
@@ -161,31 +471,31 @@
     <section id="comparison" class="comparison">
         <div class="container">
             <div class="section-header">
-                <h2>Transforme Sua Prospecção</h2>
-                <p>De horas de trabalho manual para resultados instantâneos</p>
+                <h2>Vantagens Exclusivas</h2>
+                <p>Da presença digital comum à excelência em transformação digital</p>
             </div>
             
             <div class="comparison-container">
                 <div class="comparison-content">
                     <div class="before">
-                        <h3>Antes</h3>
-                        <p>Você gastando horas buscando contatos</p>
+                        <h3>Sem a Magnológica</h3>
+                        <p>Desafios comuns na transformação digital</p>
                         <ul>
-                            <li><i class="fas fa-times"></i> Buscas manuais demoradas</li>
-                            <li><i class="fas fa-times"></i> Dados desatualizados e imprecisos</li>
-                            <li><i class="fas fa-times"></i> Baixo volume de contatos qualificados</li>
-                            <li><i class="fas fa-times"></i> Perda de oportunidades de negócio</li>
+                            <li><i class="fas fa-times"></i> Presença digital pouco impactante</li>
+                            <li><i class="fas fa-times"></i> Dificuldade em gerar leads qualificados</li>
+                            <li><i class="fas fa-times"></i> Baixo retorno sobre investimento digital</li>
+                            <li><i class="fas fa-times"></i> Estratégia digital desconectada dos objetivos</li>
                         </ul>
                     </div>
                     
                     <div class="after">
-                        <h3>Depois</h3>
-                        <p>Você com 50 contatos em segundos</p>
+                        <h3>Com a Magnológica</h3>
+                        <p>Excelência em transformação digital</p>
                         <ul>
-                            <li><i class="fas fa-check"></i> Processo 100% automatizado</li>
-                            <li><i class="fas fa-check"></i> Dados precisos e atualizados</li>
-                            <li><i class="fas fa-check"></i> Alto volume de contatos qualificados</li>
-                            <li><i class="fas fa-check"></i> Mais tempo para fechar negócios</li>
+                            <li><i class="fas fa-check"></i> Presença digital premium e sofisticada</li>
+                            <li><i class="fas fa-check"></i> Fluxo contínuo de leads qualificados</li>
+                            <li><i class="fas fa-check"></i> ROI significativo e mensurável</li>
+                            <li><i class="fas fa-check"></i> Estratégia alinhada com seus objetivos de negócio</li>
                         </ul>
                     </div>
                     
@@ -199,46 +509,46 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Impacto Real</h2>
-                <p>O que nossos clientes estão dizendo sobre a transformação em seus negócios</p>
+                <h2>Excelência Reconhecida</h2>
+                <p>O que nossos clientes dizem sobre a transformação digital premium</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Com essa ferramenta, consegui agendar 12 reuniões na primeira semana. O retorno foi imediato e já fechei 3 novos contratos que pagaram o investimento várias vezes."
+                        "A Magnológica revolucionou nossa presença digital. O site premium que desenvolveram captura perfeitamente nossa essência de marca e já gerou um aumento de 35% nas conversões."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">RC</div>
                         <div class="author-info">
-                            <h4>Roberta Campos</h4>
-                            <p>CEO, Agência Growth</p>
+                            <h4>Roberta Costa</h4>
+                            <p>Diretora de Marketing, Luxo Boutique</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "O tempo que economizei com prospecção me permitiu focar no que realmente importa: fechar negócios. Em um mês, meu faturamento aumentou 40%."
+                        "Os leads que recebemos são extremamente qualificados. A estratégia de SEO implementada posicionou nossa marca como referência no segmento, com retorno visível em poucas semanas."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">PS</div>
                         <div class="author-info">
-                            <h4>Pedro Silva</h4>
-                            <p>Consultor Independente</p>
+                            <h4>Paulo Silva</h4>
+                            <p>CEO, Consultoria Elite</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Como freelancer, não tinha tempo para prospecção. Com o LeadMagnet Pro, tenho uma lista diária de contatos qualificados. Transformou completamente meu fluxo de trabalho."
+                        "A abordagem estratégica da Magnológica transformou nosso negócio. A combinação de site premium, SEO e geração de leads qualificados nos colocou em um novo patamar no mercado."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">AM</div>
                         <div class="author-info">
-                            <h4>Amanda Mendes</h4>
-                            <p>Designer Freelancer</p>
+                            <h4>Ana Mendes</h4>
+                            <p>Diretora Executiva, Grupo Excellence</p>
                         </div>
                     </div>
                 </div>
@@ -249,9 +559,9 @@
     <!-- Final CTA -->
     <section id="final-cta" class="final-cta">
         <div class="container">
-            <h2>A era da busca acabou. Agora é só conquistar.</h2>
-            <p>Junte-se a centenas de profissionais que já transformaram sua prospecção com nossa tecnologia</p>
-            <a href="https://wa.me/5581984027098?text=quero%20a%20ferramenta" target="_blank" class="hero-button">Testar gratuitamente <i class="fas fa-arrow-right"></i></a>
+            <h2>Eleve seu negócio ao próximo nível digital</h2>
+            <p>Junte-se às empresas que já experimentaram a transformação digital premium da Magnológica</p>
+            <a href="https://wa.me/5581984027098?text=Quero%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="hero-button">Solicitar Consultoria <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -259,7 +569,7 @@
     <footer>
         <div class="container">
             <a href="#" class="footer-logo">
-                <i class="fas fa-bolt"></i>LeadMagnet<span>Pro</span>
+                <i class="fas fa-crown"></i>Magnológica
             </a>
             <div class="footer-links">
                 <a href="#">Termos de Uso</a>
@@ -267,7 +577,7 @@
                 <a href="#">Contato</a>
                 <a href="#">FAQ</a>
             </div>
-            <p class="copyright">© 2023 LeadMagnet Pro. Todos os direitos reservados.</p>
+            <p class="copyright">© 2023 Magnológica. Todos os direitos reservados. Excelência em Transformação Digital.</p>
         </div>
     </footer>
 
