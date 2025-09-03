@@ -9,223 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Estilos base do site */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-header h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        
-        .section-header p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Estilos da nova seção de portfólio */
-        .portfolio-section-new {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-        
-        .portfolio-section-new .subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-style: italic;
-            color: #888;
-            margin-top: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .portfolio-grid-new {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 80px;
-            margin-top: 60px;
-        }
-        
-        .portfolio-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .portfolio-mockup {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
-        }
-        
-        .mockup-frame {
-            width: 280px;
-            height: 500px;
-            background: #111;
-            border-radius: 30px;
-            padding: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .mockup-screen {
-            width: 100%;
-            height: 100%;
-            border-radius: 22px;
-            overflow: hidden;
-            background-size: cover;
-            background-position: top center;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        
-        .mockup-stand {
-            width: 100px;
-            height: 20px;
-            background: #444;
-            border-radius: 3px;
-            margin-top: 20px;
-            position: relative;
-        }
-        
-        .mockup-stand::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 10px;
-            background: #333;
-            border-radius: 2px;
-        }
-        
-        .portfolio-content {
-            padding: 30px;
-        }
-        
-        .portfolio-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-        
-        .portfolio-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .feature-tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .portfolio-description {
-            color: #555;
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        
-        .portfolio-btn-new {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
-        }
-        
-        .portfolio-btn-new:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
-        }
-        
-        /* Responsividade */
-        @media (max-width: 992px) {
-            .portfolio-card {
-                grid-template-columns: 1fr;
-            }
-            
-            .portfolio-mockup {
-                padding: 40px 20px;
-            }
-            
-            .mockup-frame {
-                width: 250px;
-                height: 450px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .portfolio-section-new {
-                padding: 60px 0;
-            }
-            
-            .mockup-frame {
-                width: 220px;
-                height: 400px;
-            }
-            
-            .portfolio-title {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -246,10 +30,6 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop>
-            <source src="assets/hero-video.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos HTML5.
-        </video>
         <div class="container">
             <div class="hero-content">
                 <h1>Magnológica: Excelência em Transformação Digital</h1>
@@ -350,7 +130,7 @@
                         </div>
                         
                         <p class="portfolio-description">
-                            Uma arquitetura digital que combina força mitológica com tecnologia de ponta. Cada elemento foi meticulosamente esculpido para transmitir poder e atualidade.
+                            Uma arquitetura digital que combina força mitológica com tecnologia de ponta. Cada elemento foi meticulosamente esculpido para transmitir poder и atualidade.
                         </p>
                         
                         <a href="https://modas-barbearia-m5w1.vercel.app/" target="_blank" class="portfolio-btn-new">
@@ -488,6 +268,8 @@
                         </ul>
                     </div>
                     
+                    <div class="divider"></div>
+                    
                     <div class="after">
                         <h3>Com a Magnológica</h3>
                         <p>Excelência em transformação digital</p>
@@ -498,8 +280,6 @@
                             <li><i class="fas fa-check"></i> Estratégia alinhada com seus objetivos de negócio</li>
                         </ul>
                     </div>
-                    
-                    <div class="divider"></div>
                 </div>
             </div>
         </div>
@@ -529,7 +309,7 @@
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Os leads que recebemos são extremamente qualificados. A estratégia de SEO implementada posicionou nossa marca como referência no segmento, com retorno visível em poucas semanas."
+                        "Os leads que recebemos são extremamente qualificados. A estratégia de SEO implementada posicionou nossa marca como referência no segmento, avec retorno visível em poucas semanas."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">PS</div>
@@ -581,8 +361,6 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
